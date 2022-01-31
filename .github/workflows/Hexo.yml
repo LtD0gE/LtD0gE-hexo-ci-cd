@@ -16,11 +16,10 @@ jobs:
           cd node-v16.13.2-linux-x64
           sudo cp -R ./* /usr
           sudo npm install -g npm@latest
-      - name: "Install Hexo,Theme and Generate"
+      - name: "Install Hexo and Generate"
         run: |
           sudo npm install -g hexo-cli
           cd $GITHUB_WORKSPACE/hexo
-          sudo npm install --save hexo-theme-fluid
           hexo clean
           hexo generate
       - name: "Deploy to Github Pages"
