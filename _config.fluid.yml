@@ -79,11 +79,11 @@ fun_features:
   # 为 subtitle 添加打字机效果
   # Typing animation for subtitle
   typing:
-    enable: false
+    enable: true
 
     # 打印速度，数字越大越慢
     # Typing speed, the larger the number, the slower
-    typeSpeed: 70
+    typeSpeed: 50
 
     # 游标字符
     # Cursor character
@@ -96,7 +96,7 @@ fun_features:
   # 为文章内容中的标题添加锚图标
   # Add an anchor icon to the title on the post page
   anchorjs:
-    enable: true
+    enable: false
     element: h1,h2,h3,h4,h5,h6
     placement: right
     # Options: hover | always | touch
@@ -298,7 +298,7 @@ iconfont: //at.alicdn.com/t/font_1736178_lbnruvf0jn.css
 navbar:
   # 导航栏左侧的标题，为空则按 hexo config 中 `title` 显示
   # The title on the left side of the navigation bar. If empty, it is based on `title` in hexo config
-  blog_title: ""
+  blog_title: "D0gE博客"
 
   # 导航栏毛玻璃特效，实验性功能，可能会造成页面滚动掉帧和抖动，部分浏览器不支持会自动不生效
   # Navigation bar frosted glass special animation. It is an experimental feature
@@ -307,7 +307,7 @@ navbar:
 
     # 模糊像素，只能为数字，数字越大模糊度越高
     # Number of blurred pixel. the larger the number, the higher the blur
-    px: 3
+    px: 10
 
     # 不透明度，数字越大透明度越低，注意透明过度可能看不清菜单字体
     # Ratio of opacity, 1.0 is completely opaque
@@ -322,7 +322,7 @@ navbar:
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
-    #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
+    - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
 # Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files
@@ -340,7 +340,7 @@ search:
   # 搜索的范围
   # Search field
   # Options: post | page | all
-  field: post
+  field: all
 
   # 搜索是否扫描正文
   # If true, search will scan the post content
@@ -398,7 +398,8 @@ footer:
   content: '
     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
     <i class="iconfont icon-love"></i>
-    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a><br>
+    Generated via <a href="https://github.com/LtD0gE/LtD0gE-hexo-ci-cd" target="_blank" rel="nofollow noopener">Github Actions</a>
   '
 
   # 展示网站的 PV、UV 统计数
@@ -461,11 +462,11 @@ index:
     # 通过 API 接口作为首页副标题的内容，必须返回的是 JSON 格式，如果请求失败则按 text 字段显示，该功能必须先开启 typing 打字机功能
     # Subtitle of the homepage through the API, must be returned a JSON. If the request fails, it will be displayed in `text` value. This feature must first enable the typing animation
     api:
-      enable: false
+      enable: true
 
       # 请求地址
       # Request url
-      url: ""
+      url: "https://v1.jinrishici.com/all.json"
 
       # 请求方法
       # Request method
@@ -478,7 +479,7 @@ index:
 
       # 从请求结果获取字符串的取值字段，最终必须是一个字符串，例如返回结果为 {"data": {"author": "fluid", "content": "An elegant theme"}}, 则取值字段为 ['data', 'content']；如果返回是列表则自动选择第一项
       # The value field of the string obtained from the response. For example, the response content is {"data": {"author": "fluid", "content": "An elegant theme"}}, the expected `keys: ['data','content']`; if the return is a list, the first item is automatically selected
-      keys: []
+      keys: ['content']
 
   # 自动截取文章摘要
   # Auto extract post
@@ -656,7 +657,7 @@ post:
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis
-    type: waline
+    type: valine
 
 
 #---------------------------
@@ -718,16 +719,16 @@ gitalk:
 # Based on LeanCloud
 # See: https://valine.js.org/
 valine:
-  appId:
-  appKey:
+  appId: 'IUrJ5OGytvM27pdObtejXoxH-MdYXbMMI'
+  appKey: 'xSLUs4uIXEX5nsgnJcgSpDuu'
   path: window.location.pathname
-  placeholder:
+  placeholder: 'Type some texts here...'
   avatar: 'retro'
   meta: ['nick', 'mail', 'link']
-  requiredFields: []
+  requiredFields: ['nick','mail']
   pageSize: 10
   lang: 'zh-CN'
-  highlight: false
+  highlight: true
   recordIP: false
   serverURLs: ''
   emojiCDN:
@@ -740,8 +741,8 @@ valine:
 # See: https://waline.js.org/
 waline:
   serverURL: 'https://iurj5ogy.api.lncldglobal.com'
-  appId: 'IUrJ5OGytvM27pdObtejXoxH-MdYXbMMI'
-  appKey: 'xSLUs4uIXEX5nsgnJcgSpDuu'
+  appId: ''
+  appKey: ''
   path: window.location.pathname
   placeholder:
   meta: ['nick', 'mail', 'link']
@@ -808,7 +809,7 @@ archive:
   banner_img: /img/default.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
-  subtitle: 'ARCHIVE'
+  subtitle: '归档 / Archive'
 
 
 #---------------------------
@@ -820,12 +821,12 @@ category:
   banner_img: /img/default.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
-  subtitle: 'CATEGORY'
+  subtitle: '分类 / Category'
 
   # 分类的排序字段，前面带减号是倒序，不带减号是正序
   # Sort field for categories, with a minus sign is reverse order
   # Options: length | name
-  order_by: "-length"
+  order_by: "name"
 
   # 层级的折叠深度，0 是全部折叠，大于 0 后如果存在子分类则默认展开
   # Collapse depth. If 0, all posts collapsed. If greater than 0, it will be expanded by default if there are subcategories
@@ -850,7 +851,7 @@ tag:
   banner_img: /img/default.jpg
   banner_img_height: 80
   banner_mask_alpha: 0.3
-  subtitle: 'TAG'
+  subtitle: '标签 / Tag'
   tagcloud:
     min_font: 15
     max_font: 30
@@ -868,10 +869,10 @@ about:
   banner_img: /img/default.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
-  subtitle: 'ABOUT'
+  subtitle: '关于 / About'
   avatar: /img/avatar.png
-  name: "Fluid"
-  intro: "About"
+  name: "LtD0gE"
+  intro: "一条酸菜鱼"
   # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
   # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, The icon is no longer a link, but a hovering QR code
   icons:
@@ -902,7 +903,7 @@ page404:
   banner_img: /img/default.jpg
   banner_img_height: 85
   banner_mask_alpha: 0.3
-  subtitle: "Page not found"
+  subtitle: "你要找的页面不见了..."
 
 
 #---------------------------
@@ -944,7 +945,7 @@ links:
   # 友链下方自定义区域，支持 HTML，可插入例如申请友链的文字
   # Custom content at the bottom of the links
   custom:
-    enable: false
+    enable: true
     content: '<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：D0gE博客</li><li>简介：LtD0gE</li><li>链接：https://www.ltdoge.top</li><li>图片：https://www.ltdoge.top/avatar.jpg</li></ul>'
 
 
