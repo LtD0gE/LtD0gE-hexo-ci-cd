@@ -730,7 +730,7 @@ valine:
   lang: 'zh-CN'
   highlight: true
   recordIP: false
-  serverURLs: ''
+  serverURLs: 'https://iurj5ogy.api.lncldglobal.com'
   emojiCDN:
   emojiMaps:
   enableQQ: false
