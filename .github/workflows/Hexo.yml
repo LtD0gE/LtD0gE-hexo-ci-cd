@@ -27,8 +27,8 @@ jobs:
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
         with:
-          target-branch: main
-          build_dir: public
+          target_branch: main
+          build_dir: hexo/public
           repo: "LtD0gE/www.ltdoge.top"
           keep_history: true
           allow_empty_commit: false
