@@ -13,7 +13,7 @@ jobs:
           sudo apt install nodejs npm
           wget -O ./nodejs.tar.xz https://nodejs.org/dist/v16.13.2/node-v16.13.2-linux-x64.tar.xz
           tar -xvf ./nodejs.tar.xz
-          cd nodejs
+          cd node-v16.13.2-linux-x64
           sudo cp -R ./* /usr
           sudo npm install -g npm@latest
       - name: "Install Hexo,Theme and Generate"
