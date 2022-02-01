@@ -10,7 +10,7 @@ jobs:
           path: "hexo"
       - name: "Initalize Node.JS environment"
         run: |
-          sudo apt install nodejs npm
+          sudo apt install nodejs npm curl
           wget -O ./nodejs.tar.xz https://nodejs.org/dist/v16.13.2/node-v16.13.2-linux-x64.tar.xz
           tar -xvf ./nodejs.tar.xz
           cd node-v16.13.2-linux-x64
@@ -34,3 +34,10 @@ jobs:
           commit_message: "Automatic Deploy"
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
+      - name: "Purge Cloudflare Cache"
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/0463d50990b37f868fc4db6abbd6ae2b/purge_cache" \
+          -H "X-Auth-Email: ltdoge@ltdoge.top"      \
+          -H "X-Auth-Key: ${{ secrets.CF_API_KEY }}" \
+          -H "Content-Type: application/json"      \
+          --data '{"purge_everything":true}'
