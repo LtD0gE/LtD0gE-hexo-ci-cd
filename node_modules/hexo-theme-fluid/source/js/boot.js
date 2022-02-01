@@ -86,6 +86,7 @@ document.addEventListener('pjax:complete', function(){ //PJAX重载
   loadExternalResource("/css/main.css","css"); //重载主css
   loaded=true;
   }
+  lazyload(window, document); //图片懒加载
 })
 /*
 pjax._handleResponse = pjax.handleResponse;
