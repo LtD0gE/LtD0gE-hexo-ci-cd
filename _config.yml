@@ -105,3 +105,20 @@ theme: fluid
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+# Markdown config
+markdown_it_plus:
+  render:
+    html: true						
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: false
+    quotes: '“”‘’'
+  plugins: markdown-it-emoji
+  anchors:	
+    level: 2
+    collisionSuffix: 'v'
+    permalink: true
+    permalinkClass: header-anchor
+    permalinkSide: 'left'
+    permalinkSymbol: ¶

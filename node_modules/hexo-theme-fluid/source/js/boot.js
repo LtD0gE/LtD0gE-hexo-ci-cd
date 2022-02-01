@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"])',
     selectors: ["main","title","body div#banner","meta[name=description]"],
     //三个分别是容器 标题 头图
-  debug: true,cacheBust: false
+  debug: false,cacheBust: false
 });
 var homeURL=document.location.protocol+'//'+document.location.host+'/'; //主页网址
 if(document.URL === homeURL){
