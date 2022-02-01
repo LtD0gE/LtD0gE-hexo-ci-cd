@@ -858,7 +858,8 @@ tag:
     unit: px
     start_color: "#BBBBEE"
     end_color: "#337ab7"
-
+pjax:
+  enable: true
 
 #---------------------------
 # 关于页
@@ -1009,3 +1010,5 @@ static_prefix:
   twikoo: https://cdn.jsdelivr.net/npm/twikoo@1/dist/
 
   hint: https://cdn.jsdelivr.net/npm/hint.css@2/
+
+  pjax: https://cdn.jsdelivr.net/npm/pjax@latest/
