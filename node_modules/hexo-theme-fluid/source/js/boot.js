@@ -87,6 +87,7 @@ document.addEventListener('pjax:complete', function(){ //PJAX重载
   loaded=true;
   }
   lazyload(window, document); //图片懒加载
+  Fluid.events.registerScrollTopArrowEvent();
 })
 /*
 pjax._handleResponse = pjax.handleResponse;

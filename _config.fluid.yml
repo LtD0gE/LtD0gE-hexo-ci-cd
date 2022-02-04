@@ -374,7 +374,7 @@ scroll_down_arrow:
 # 向顶部滚动的箭头
 # Scroll top arrow
 scroll_top_arrow:
-  enable: true
+  enable: false
 
 # Open Graph metadata
 # See: https://hexo.io/docs/helpers.html#open-graph
@@ -920,25 +920,25 @@ links:
   # 友链的成员项
   # Member item of page
   items:
-#    - {
-#      title: "Fluid Blog",
-#      intro: "主题博客",
-#      link: "https://hexo.fluid-dev.com/",
-#      avatar: "/img/favicon.png"
-#    }
-#    - {
-#      title: "Fluid Docs",
-#      intro: "主题使用指南",
-#      link: "https://hexo.fluid-dev.com/docs/",
-#      avatar: "/img/favicon.png"
-#    }
-#    - {
-#      title: "Fluid Repo",
-#      intro: "主题 GitHub 仓库",
-#      link: "https://github.com/fluid-dev/hexo-theme-fluid",
-#      avatar: "/img/favicon.png"
-#    }
-#
+    - {
+      title: "老可の小站",
+      intro: "又一个WordPress站点",
+      link: "https://blog.laoke.fun",
+      avatar: "https://blog.laoke.fun/wp-includes/images/w-logo-blue-white-bg.png"
+    }
+    - {
+      title: "-Moci Blog-",
+      intro: "-Moci Blog-",
+      link: "https://imoci.top/",
+      avatar: "https://pic.imgdb.cn/item/61f7d22c2ab3f51d91df6f46.jpg"
+    }
+    - {
+      title: "Adkinsm Blog",
+      intro: "小小部落阁",
+      link: "https://www.emmm.asia/",
+      avatar: "https://pic.imgdb.cn/item/61f7d3e52ab3f51d91e0b054.jpg"
+    }
+
   # 当成员头像加载失败时，替换为指定图片
   # When the member avatar fails to load, replace the specified image
   onerror_avatar: /img/avatar.png
