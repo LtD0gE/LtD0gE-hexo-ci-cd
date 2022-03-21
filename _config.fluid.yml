@@ -438,7 +438,7 @@ footer:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  banner_img: /img/default.jpg
+  banner_img: https://pic.imgdb.cn/item/6237de5827f86abb2a975c25.jpg
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
@@ -510,7 +510,7 @@ index:
 # Post Page
 #---------------------------
 post:
-  banner_img: /img/default.jpg
+  banner_img: https://pic.imgdb.cn/item/6237de5827f86abb2a975c25.jpg
   banner_img_height: 70
   banner_mask_alpha: 0.3
 
@@ -806,7 +806,7 @@ cusdis:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /img/default.jpg
+  banner_img: https://pic.imgdb.cn/item/6237de5827f86abb2a975c25.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle: '归档 / Archive'
@@ -818,7 +818,7 @@ archive:
 #---------------------------
 category:
   enable: true
-  banner_img: /img/default.jpg
+  banner_img: https://pic.imgdb.cn/item/6237de5827f86abb2a975c25.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle: '分类 / Category'
@@ -848,7 +848,7 @@ category:
 #---------------------------
 tag:
   enable: true
-  banner_img: /img/default.jpg
+  banner_img: https://pic.imgdb.cn/item/6237de5827f86abb2a975c25.jpg
   banner_img_height: 80
   banner_mask_alpha: 0.3
   subtitle: '标签 / Tag'
@@ -867,7 +867,7 @@ pjax:
 #---------------------------
 about:
   enable: true
-  banner_img: /img/default.jpg
+  banner_img: https://pic.imgdb.cn/item/6237de5827f86abb2a975c25.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle: '关于 / About'
@@ -890,7 +890,7 @@ about:
 # Custom Page through `hexo new page`
 #---------------------------
 page:
-  banner_img: /img/default.jpg
+  banner_img: https://pic.imgdb.cn/item/6237de5827f86abb2a975c25.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -901,7 +901,7 @@ page:
 #---------------------------
 page404:
   enable: true
-  banner_img: /img/default.jpg
+  banner_img: https://pic.imgdb.cn/item/6237de5827f86abb2a975c25.jpg
   banner_img_height: 85
   banner_mask_alpha: 0.3
   subtitle: "你要找的页面不见了..."
@@ -913,7 +913,7 @@ page404:
 #---------------------------
 links:
   enable: true
-  banner_img: /img/default.jpg
+  banner_img: https://pic.imgdb.cn/item/6237de5827f86abb2a975c25.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
