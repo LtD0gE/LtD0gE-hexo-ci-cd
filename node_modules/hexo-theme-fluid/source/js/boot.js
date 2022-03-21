@@ -79,8 +79,8 @@ document.addEventListener('pjax:complete', function(){ //PJAX重载
     Fluid.plugins.typing(document.getElementById('subtitle').title); //打字机
   }
   if(!loaded){
-  loadExternalResource("https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css","css"); //代码高亮
-  loadExternalResource("https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.css","css"); //markdown
+  loadExternalResource("https://xcdn.loli.top/npm/highlight.js@10/styles/github-gist.min.css","css"); //代码高亮
+  loadExternalResource("https://xcdn.loli.top/npm/github-markdown-css@4.0.0/github-markdown.css","css"); //markdown
   // loadExternalResource("/css/main.css","css"); //主题主css
   $('link[href="/css/main.css"]').remove(); //移除主css标签，确保最后加载
   loadExternalResource("/css/main.css","css"); //重载主css
@@ -104,8 +104,8 @@ pjax.handleResponse = function(responseText, request, href, options) {
         pjax._handleResponse(responseText, request, href, options);
       });
       //这里可以引入一些可以后加载的
-      loadExternalResource("//cdn.jsdelivr.net/npm/leancloud-realtime@5.0.0-rc.0/dist/realtime-browser.min.js", "js");
-      loadExternalResource("//cdn.jsdelivr.net/npm/leancloud-storage@4.3.1/dist/av-min.js", "js");
+      loadExternalResource("//xcdn.loli.top/npm/leancloud-realtime@5.0.0-rc.0/dist/realtime-browser.min.js", "js");
+      loadExternalResource("//xcdn.loli.top/npm/leancloud-storage@4.3.1/dist/av-min.js", "js");
   }else{
       pjax._handleResponse(responseText, request, href, options);
   }
