@@ -212,7 +212,7 @@ custom_head: ''
 
 # 自定义底部 HTML 内容（位于 footer 上方），注意不要和 `post: custom` 配置冲突
 # Customize the HTML content at the bottom (located above the footer), be careful not to conflict with `post: custom`
-custom_html: '<br><br>'
+custom_html: ''
 
 # 网页访问统计
 # Analysis of website visitors
@@ -399,7 +399,8 @@ footer:
     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
     <i class="iconfont icon-love"></i>
     <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a><br>
-    Generated via <a href="https://github.com/LtD0gE/LtD0gE-hexo-ci-cd" target="_blank" rel="nofollow noopener">Github Actions</a>
+    Generated via <a href="https://github.com/LtD0gE/LtD0gE-hexo-ci-cd" target="_blank" rel="nofollow noopener">Github Actions</a><br>
+    <br>
   '
 
   # 展示网站的 PV、UV 统计数
