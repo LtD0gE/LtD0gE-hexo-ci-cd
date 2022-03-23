@@ -1,6 +1,6 @@
 /* global CONFIG, jQuery */
 
-(function() {
+
   // Modify by [hexo-generator-search](https://github.com/wzpan/hexo-generator-search)
   function localSearchFunc(path, searchSelector, resultSelector) {
     'use strict';
@@ -157,4 +157,3 @@
   modal.on('hidden.bs.modal', function() {
     localSearchReset(searchSelector, resultSelector);
   });
-})();

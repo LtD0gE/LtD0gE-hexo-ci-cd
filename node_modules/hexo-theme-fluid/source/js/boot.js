@@ -91,6 +91,19 @@ document.addEventListener('pjax:complete', function(){ //PJAX重载
   Fluid.plugins.initTocBot();
   Fluid.plugins.initFancyBox(); 
   Fluid.plugins.initCopyCode();
+  var modal = jQuery('#modalSearch');
+  var searchSelector = '#local-search-input';
+  var resultSelector = '#local-search-result';
+  modal.on('show.bs.modal', function() {
+    var path = CONFIG.search_path || '/local-search.xml';
+    localSearchFunc(path, searchSelector, resultSelector);
+  });
+  modal.on('shown.bs.modal', function() {
+    jQuery('#local-search-input').focus();
+  });
+  modal.on('hidden.bs.modal', function() {
+    localSearchReset(searchSelector, resultSelector);
+  });
 })
 /*
 pjax._handleResponse = pjax.handleResponse;
