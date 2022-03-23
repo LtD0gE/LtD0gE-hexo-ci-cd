@@ -90,6 +90,7 @@ document.addEventListener('pjax:complete', function(){ //PJAX重载
   Fluid.events.registerScrollTopArrowEvent();
   Fluid.plugins.initTocBot();
   Fluid.plugins.initFancyBox(); 
+  Fluid.plugins.initCopyCode();
 })
 /*
 pjax._handleResponse = pjax.handleResponse;
