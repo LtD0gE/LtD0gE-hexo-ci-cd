@@ -41,3 +41,19 @@ jobs:
           -H "X-Auth-Key: ${{ secrets.CF_API_KEY }}" \
           -H "Content-Type: application/json"      \
           --data '{"purge_everything":true}'
+      - name: "Delete Builder Workflow Runs"
+        uses: MajorScruffy/delete-workflow-runs
+        id: delete-workflow-runs
+        with:
+          repository: LtD0gE/LtD0gE-hexo-ci-cd
+          maximum-workflow-runs-to-keep: 8
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+      - name: "Delete Page Workflow Runs"
+        uses: MajorScruffy/delete-workflow-runs
+        id: delete-workflow-runs
+        with:
+          repository: LtD0gE/www.ltdoge.top
+          maximum-workflow-runs-to-keep: 8
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
