@@ -42,14 +42,14 @@ jobs:
           -H "Content-Type: application/json"      \
           --data '{"purge_everything":true}'
       - name: "Delete Builder Workflow Runs"
-        uses: MajorScruffy/delete-workflow-runs@8e39911
+        uses: MajorScruffy/delete-workflow-runs@8e399117ad12741fd388c69d4ab81327591a0aa1
         with:
           repository: LtD0gE/LtD0gE-hexo-ci-cd
           maximum-workflow-runs-to-keep: 8
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
       - name: "Delete Page Workflow Runs"
-        uses: MajorScruffy/delete-workflow-runs@8e39911
+        uses: MajorScruffy/delete-workflow-runs@8e399117ad12741fd388c69d4ab81327591a0aa1
         with:
           repository: LtD0gE/www.ltdoge.top
           maximum-workflow-runs-to-keep: 8
