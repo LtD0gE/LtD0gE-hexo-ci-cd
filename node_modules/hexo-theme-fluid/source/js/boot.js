@@ -88,6 +88,8 @@ document.addEventListener('pjax:complete', function(){ //PJAX重载
   }
   lazyload(window, document); //图片懒加载
   Fluid.events.registerScrollTopArrowEvent();
+  Fluid.plugins.initTocBot();
+  Fluid.plugins.initFancyBox(); 
 })
 /*
 pjax._handleResponse = pjax.handleResponse;
