@@ -43,7 +43,6 @@ jobs:
           --data '{"purge_everything":true}'
       - name: "Delete Builder Workflow Runs"
         uses: MajorScruffy/delete-workflow-runs@8e39911
-        id: delete-workflow-runs
         with:
           repository: LtD0gE/LtD0gE-hexo-ci-cd
           maximum-workflow-runs-to-keep: 8
@@ -51,7 +50,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
       - name: "Delete Page Workflow Runs"
         uses: MajorScruffy/delete-workflow-runs@8e39911
-        id: delete-workflow-runs
         with:
           repository: LtD0gE/www.ltdoge.top
           maximum-workflow-runs-to-keep: 8
