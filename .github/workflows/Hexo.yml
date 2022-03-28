@@ -45,13 +45,11 @@ jobs:
         uses: GitRML/delete-workflow-runs@main
         with:
           token: ${{ secrets.GH_PAT }}
-          retain_days: 7
           repository: LtD0gE/LtD0gE-hexo-ci-cd
           keep_minimum_runs: 10
       - name: "Delete Page Workflow Runs"
         uses: GitRML/delete-workflow-runs@main
         with:
           token: ${{ secrets.GH_PAT }}
-          retain_days: 7
           repository: LtD0gE/www.ltdoge.top
           keep_minimum_runs: 10
