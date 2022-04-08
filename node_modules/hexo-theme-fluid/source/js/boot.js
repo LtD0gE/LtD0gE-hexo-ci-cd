@@ -23,9 +23,6 @@ function pjax_init(){
   document.addEventListener('pjax:send', function() {
       NProgress.start();
   });
-  document.addEventListener('pjax:complete', function() {
-      NProgress.done();
-  });
   document.addEventListener('pjax:error', function() {
   });
   document.addEventListener('pjax:success', function() {
@@ -104,6 +101,7 @@ document.addEventListener('pjax:complete', function(){ //PJAX重载
   modal.on('hidden.bs.modal', function() {
     localSearchReset(searchSelector, resultSelector);
   });
+  NProgress.done();
 })
 /*
 pjax._handleResponse = pjax.handleResponse;
