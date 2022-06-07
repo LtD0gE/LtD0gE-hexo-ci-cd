@@ -1,5 +1,5 @@
 name: HexoCI/CD
-on: [push]
+on: workflow_dispatch
 jobs:
   GenerateAndDeploy:
     runs-on: ubuntu-latest
